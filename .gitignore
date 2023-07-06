@@ -13,7 +13,6 @@ dist-ssr
 *.local
 
 .env
-projects.ts
 src/assets/*.png
 
 # Editor directories and files
