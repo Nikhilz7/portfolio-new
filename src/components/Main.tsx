@@ -1,12 +1,15 @@
 import {TypeAnimation} from 'react-type-animation';
 import {FaLinkedinIn} from'react-icons/fa';
 import {BsGithub} from'react-icons/bs';
-import {SiLeetcode} from'react-icons/si';
+import {CgMail} from'react-icons/cg';
 import Button from './Button.component';
 
 const Main = () => {
     const Resume =import.meta.env.VITE_RESUME;
     const imgUrl = new URL('../assets/background.png', import.meta.url).href;
+    const mail:string =import.meta.env.VITE_MAIL;
+    const linkedin:string =import.meta.env.VITE_LINKEDIN;
+    const github:string =import.meta.env.VITE_GITHUB;
   return (
     <div id="main">
         
@@ -37,9 +40,9 @@ const Main = () => {
                 <Button value='Get my resume' disabled={false} link={Resume}/>
                 </div>
                 <div className="flex flex-row justify-between pt-6 max-w-[200px] w-full">
-                    <FaLinkedinIn color="white" size={20} className="cursor-pointer" />
-                    <BsGithub color="white" size={20} className="cursor-pointer" />
-                    <SiLeetcode color="white" size={20} className="cursor-pointer" />
+                    <FaLinkedinIn onClick={()=>window.open(linkedin,'_blank')?.focus()} color="white" size={20} className="cursor-pointer" />
+                    <BsGithub onClick={()=>window.open(github,'_blank')?.focus()} color="white" size={20} className="cursor-pointer" />
+                    <CgMail onClick={()=>window.open('mailto:'+mail,'_blank')?.focus()} color="white" size={20} className="cursor-pointer" />
 
                 </div>
             </div>
