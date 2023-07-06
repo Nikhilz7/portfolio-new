@@ -1,6 +1,5 @@
 import {useState} from 'react';
-import {AiOutlineHome, AiOutlineMenu,AiOutlineProject,AiOutlineMail} from 'react-icons/ai';
-import { BsPerson } from 'react-icons/bs'
+import {AiOutlineHome, AiOutlineMenu, AiOutlineMail} from 'react-icons/ai';
 import {GrProjects,GrTechnology} from 'react-icons/gr';
 
 const Sidenav = () => {
